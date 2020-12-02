@@ -8,3 +8,5 @@ The application should meet all the acceptance criteria listed in the project ba
 
 ## Sprint Breakdowns
 ### Sprint Breakdowns
+
+![alt text] (https://i.gyazo.com/ca79c2535f073802864948b957666521.png)
