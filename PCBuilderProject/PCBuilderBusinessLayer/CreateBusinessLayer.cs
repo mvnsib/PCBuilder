@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace PCBuilderBusinessLayer
 {
-    class CreateBusinessLayer
+    public class CreateBusinessLayer
     {
         public UserTable SelectedUser { get; set; }
         public List<UserTable> RetrieveAll()
@@ -23,16 +23,23 @@ namespace PCBuilderBusinessLayer
         {
             using (var db = new PCBuilderContext())
             {
-                var newUser = new UserTable
+                if (!(db.UserTables.Contains(db.UserTables.Where(x => x.UserName == userName).FirstOrDefault())))
                 {
-                    UserName = userName,
-                    FirstName = firstName,
-                    LastName = lastName,
-                    PassWord = passWord
-                };
-                db.UserTables.Add(newUser);
+                    var newUser = new UserTable
+                    {
+                        UserName = userName,
+                        FirstName = firstName,
+                        LastName = lastName,
+                        PassWord = passWord
+                    };
+                    db.UserTables.Add(newUser);
 
-                db.SaveChanges();
+                    db.SaveChanges();
+                }
+                else
+                {
+                    throw new ArgumentException("Username exists");
+                }
             }
         }
 
@@ -51,6 +58,11 @@ namespace PCBuilderBusinessLayer
 
                 db.SaveChanges();
             }
+        }
+
+        public void CreateUser(string userName)
+        {
+            throw new NotImplementedException();
         }
 
         public void CreateRAM(int capacity, string manufacturers, string model, int speed)
