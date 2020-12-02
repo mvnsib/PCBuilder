@@ -22,10 +22,12 @@ In my first sprint, my goal was to setup my project and create the relevant data
 - [x] Update README.md
 
 **Sprint Review**
+
 I began creating the application by using the database-first approach and set up all the relevant tables and its attributes. I also partially worked on the main entitites in my login/ register page to prepare for my User functions for Sprint 2. The last thing I worked on was the Create functions for all my tables.
 
 **Sprint Retrospective**
-I have underestimated with the workload that I gave to myself and didn't manage my time too well, and eventually I worked over-time to complete my Sprint. To improve for Sprint 2 I need to be able to manage my time better.
+
+I have underestimated with the workload that I gave to myself and didn't manage my time too well, and eventually I worked over-time to complete my Sprint. To improve for Sprint 2 I need to be able to manage my time better by coming up with a plan that balances with how much I work and make sure I take regular small breaks to prevent procrastination from working too much/ being stuck at a problem for too long.
 
 ### Sprint 2: 2/12/2020
 
