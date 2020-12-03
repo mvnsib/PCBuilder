@@ -52,5 +52,9 @@ For my second sprint, my goal was to complete creating user and logging in, due 
 
 **Sprint Review**
 
+I began to work on the front-end and the back-end of creating the user, I've designed a simple GUI for the Sign in/ up pages and created a few validation so my program queries the user registration properly. The last thing I made was the remaining CRUD functions for the User and other components (e.g. CPU, Motherboard, etc...).
+
 
 **Sprint Retrospective**
+
+Just as Sprint 1, I have underestimated my program, and eventually I was stuck at a problem for far too long. I had a simple logic error with the username validation, and I spent too long to debug the problem rather than move on to the next work and iterate through the error again. For the next sprint I now know better to move on and return to get as much work done as possible. At the same time I want to prioritize the front-end and back-end of my project and focus on Testing through the weekend.
