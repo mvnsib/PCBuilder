@@ -10,7 +10,7 @@
 
 
     <Grid>
-    
+
         <Label x:Name="tv_UserName" Content="Username" HorizontalAlignment="Left" Margin="225,50,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
         <Label x:Name="tv_FirstName" Content="First Name" HorizontalAlignment="Left" Margin="225,120,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
         <Label x:Name="tv_LastName" Content="Last Name" HorizontalAlignment="Left" Margin="225,190,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
@@ -22,6 +22,10 @@
         <TextBox x:Name="i_LastName" HorizontalAlignment="Left" Margin="370,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal" TextChanged="i_LastName_TextChanged"/>
         <TextBox x:Name="i_Password" HorizontalAlignment="Left" Margin="370,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal" TextChanged="i_Password_TextChanged"/>
         <TextBox x:Name="i_ConfirmPassword" HorizontalAlignment="Left" Margin="370,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal" TextChanged="i_ConfirmPassword_TextChanged"/>
+        <!-- <PasswordBox x:Name="i_Password" HorizontalAlignment="Left" Margin="370,260,0,0" VerticalAlignment="Top" Width="200" Height="26"/>
+        <PasswordBox x:Name="i_ConfirmPassword" HorizontalAlignment="Left" Margin="370,330,0,0" VerticalAlignment="Top" Width="200" Height="26"/>-->
+        
         <Button x:Name="b_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="592,378,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_SignUp_Click"/>
+
     </Grid>
 </Page>

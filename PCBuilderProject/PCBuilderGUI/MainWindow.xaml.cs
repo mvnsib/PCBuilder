@@ -22,14 +22,18 @@ namespace PCBuilderGUI
     public partial class Login : Window
     {
         public Uri Source { get; set; }
+
+        string userName = "";
+        string passWord = "";
         public Login()
         {
             InitializeComponent();
         }
-
+        CreateBusinessLayer create = new CreateBusinessLayer();
+        ReadBusinessLayer read = new ReadBusinessLayer();
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            userName = i_Login.Text;
         }
 
         private void b_SignUp_Click(object sender, RoutedEventArgs e)
@@ -41,7 +45,33 @@ namespace PCBuilderGUI
 
         private void i_Password_TextChanged(object sender, TextChangedEventArgs e)
         {
+            passWord = i_Password.Text;
+        }
 
+        private void b_SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                
+                if (userName != "" && passWord != "")
+                {
+                    bool access = read.ReadUsernameAndPassword(userName, passWord);
+                    if (access)
+                    {
+                        MainMenu m = new MainMenu();
+                        m.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please input your username or password");
+                }
+            } 
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

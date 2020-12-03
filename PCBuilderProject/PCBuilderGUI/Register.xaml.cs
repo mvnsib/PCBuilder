@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using PCBuilderProject;
 using PCBuilderBusinessLayer;
 using System.Windows.Shapes;
+using System.Linq;
 
 namespace PCBuilderGUI
 {
@@ -36,9 +37,9 @@ namespace PCBuilderGUI
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             userName = i_UserName.Text;
-
+            
         }
-
+        
         private void i_ConfirmPassword_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -56,15 +57,43 @@ namespace PCBuilderGUI
 
         private void i_Password_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //i_Password.PasswordChar = '●';
             passWord = i_Password.Text;
+            
         }
 
         private void b_SignUp_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                bool isDigitPresent = i_Password.Text.ToString().Any(c => char.IsDigit(c));
                 if (userName != "" && firstname != "" && lastName != "" && passWord != "") {
-                    create.CreateUser(userName, firstname, lastName, passWord);
+                    if (isDigitPresent == true && i_Password.Text.Length >= 6)
+                    {
+                        if (i_ConfirmPassword.Text.ToString().Equals(i_Password.Text.ToString())) {
+                            create.CreateUser(userName, firstname, lastName, passWord);
+                            userName = "";
+                            firstname = "";
+                            lastName = "";
+                            passWord = "";
+                            MessageBox.Show("Registered Successfully");
+                            var log = new Login();
+                            
+                            var window = (Login)Application.Current.MainWindow;
+                            log.Show();
+                            window.Hide();
+                            
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Passwords do not match");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Add a number or make your password 6 or more characters to make your password stronger");
+                    }
                 }
                 else
                 {
@@ -77,5 +106,6 @@ namespace PCBuilderGUI
                 MessageBox.Show(ex.Message);
             }
         }
+      
     }
 }

@@ -8,7 +8,7 @@
         Title="Sign in" Height="450" Width="800">
     <Grid>
         <TextBox x:Name="i_Login" HorizontalAlignment="Left" Margin="221,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal"/>
-        <Button x:Name="b_SignIn" Content="Sign In" HorizontalAlignment="Left" Margin="321,279,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White"/>
+        <Button x:Name="b_SignIn" Content="Sign In" HorizontalAlignment="Left" Margin="321,279,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_SignIn_Click"/>
         <Label x:Name="tv_Login" Content="Username" HorizontalAlignment="Left" Margin="221,108,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
         <TextBox x:Name="i_Password" HorizontalAlignment="Left" Margin="221,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" BorderBrush="Black" FontSize="20" FontFamily="Arial" TextChanged="i_Password_TextChanged" />
         <Label x:Name="tv_Password" Content="Password" HorizontalAlignment="Left" Margin="223,185,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
