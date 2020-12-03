@@ -37,3 +37,21 @@ I have underestimated with the workload that I gave to myself and didn't manage 
 ### Sprint 2: 2/12/2020
 
 **Sprint Overview**
+
+For my second sprint, my goal was to complete creating user and logging in, due to being stuck at a logic error for too long. I wasn't able to progress much further and able to complete 2 of my user stories, when i intended to finish 4.
+
+**Sprint Goals**
+## Sprint 2
+
+- [x] Update README.md
+- [x] Complete User story 1,1
+- [x] Complete User story 1.1.1
+- [ ] Complete User story 1.1.2
+- [ ] Complete User story 1.2
+- [ ] Push code to Git
+- [x] Complete the wireframe for User story 0.3
+
+**Sprint Review**
+
+
+**Sprint Retrospective**
