@@ -72,7 +72,7 @@ In this sprint, I mainly focused on finishing the few Goals that was left from S
 - [x] Complete User story 1.1.3
 - [ ] Complete User story 1.2
 - [x] Start User story 4: design a basic layout of the GUI
-- [ ] Push code to Git
+- [x] Push code to Git
 
 
 **Sprint Review**
