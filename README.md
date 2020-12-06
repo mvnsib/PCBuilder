@@ -72,7 +72,7 @@ In this sprint, I mainly focused on finishing the few Goals that was left from S
 - [x] Complete User story 1.1.3
 - [ ] Complete User story 1.2
 - [x] Start User story 4: design a basic layout of the GUI
-- [ ] Push code to Git
+- [x] Push code to Git
 
 
 **Sprint Review**
@@ -82,3 +82,28 @@ I began my sprint by updating my README.md, after spending some time on that I f
 **Sprint Retrospective**
 
 In order to do better and get this project done, I need to focus less on perfecting the simple things like the GUI and not overcomplicate the validation. I shouldn't have spent 2 days on the login menu and focus on testing towards the end. For tomorrow and saturday I should 100% focus on the main component classes.
+
+### Sprint 4: 4/12/2020
+
+**Sprint Overview**
+
+In this sprint I plan to complete the CRUD methods for the 4 components table. I also plan on working with my GUI and create 8 different windows for adding and updating the components. I'm mainly focusing on the main features of my program as the due date is coming closer. And if I end up not finishing my Sprint, I will make sure the GUI is designed and my back-end is done, so all I have left to do over the weekend would be to refine the GUI, connect the frontend to the backend and finish up my unit testing.
+
+**Sprint Goals**
+
+- [ ] Complete User Story 2.1
+- [x] Complete User Story 2.1.1
+- [ ] Complete User Story 2.2
+- [x] Complete User Story 2.3
+- [ ] Complete User Story 3.1.1
+- [x] Create the basic GUI layout for every button
+- [x] Update README.md
+- [ ] Push Code to Git
+
+**Sprint Review**
+
+I began my sprint by finishing the CRUD methods and instead of using 4 different CRUD classes, I combined them as one, as it works more efficiently and it doesn't require me to instanciate 4 different objects in the code behind the GUI. Once done, I was primarily focused on getting my GUI to work and make sure the buttons function properly. And lastly I added a listbox, but I haven't populated it since I haven't connected the frontend with the backend CRUD methods.
+
+**Sprint Retrospective**
+
+Throughout the day it was a short sprint as we started a bit later than usual, since we had to discuss about our presentation and we had our Friday stand-up, and on top of it we finished an hour earlier for the quiz, so that gave us a total of 4 hours to work for our Sprint and unfortunately I wasn't able to get a lot done, so I worked for a couple more hours to get most of the things done besides the testing for my CRUD methods and connecting the CRUD with the frontend.
