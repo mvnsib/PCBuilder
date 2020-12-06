@@ -9,23 +9,23 @@
       Title="Register">
 
 
-    <Grid>
+    <Grid Background="#FF0A0A0A">
 
-        <Label x:Name="tv_UserName" Content="Username" HorizontalAlignment="Left" Margin="225,50,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
-        <Label x:Name="tv_FirstName" Content="First Name" HorizontalAlignment="Left" Margin="225,120,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
-        <Label x:Name="tv_LastName" Content="Last Name" HorizontalAlignment="Left" Margin="225,190,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
-        <Label x:Name="tv_Password" Content="Password" HorizontalAlignment="Left" Margin="225,260,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
-        <Label x:Name="tv_ConfirmPassword" Content="Confirm Password" HorizontalAlignment="Left" Margin="173,330,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
+        <Label x:Name="tv_UserName" Content="Username" HorizontalAlignment="Left" Margin="229,34,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Consolas" Foreground="Lime"/>
+        <Label x:Name="tv_FirstName" Content="First Name" HorizontalAlignment="Left" Margin="229,104,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Consolas" Foreground="Lime"/>
+        <Label x:Name="tv_LastName" Content="Last Name" HorizontalAlignment="Left" Margin="229,174,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Consolas" Foreground="Lime"/>
+        <Label x:Name="tv_Password" Content="Password" HorizontalAlignment="Left" Margin="229,244,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Consolas" Foreground="Lime"/>
+        <Label x:Name="tv_ConfirmPassword" Content="Confirm Password" HorizontalAlignment="Left" Margin="177,314,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Consolas" Foreground="Lime"/>
 
-        <TextBox x:Name="i_UserName" HorizontalAlignment="Left" Margin="370,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal"/>
-        <TextBox x:Name="i_FirstName" HorizontalAlignment="Left" Margin="370,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal" TextChanged="i_FirstName_TextChanged"/>
-        <TextBox x:Name="i_LastName" HorizontalAlignment="Left" Margin="370,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal" TextChanged="i_LastName_TextChanged"/>
-        <TextBox x:Name="i_Password" HorizontalAlignment="Left" Margin="370,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal" TextChanged="i_Password_TextChanged"/>
-        <TextBox x:Name="i_ConfirmPassword" HorizontalAlignment="Left" Margin="370,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal" TextChanged="i_ConfirmPassword_TextChanged"/>
+        <TextBox x:Name="i_UserName" HorizontalAlignment="Left" Margin="374,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" Foreground="Lime"/>
+        <TextBox x:Name="i_FirstName" HorizontalAlignment="Left" Margin="374,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" TextChanged="i_FirstName_TextChanged" Foreground="Lime"/>
+        <TextBox x:Name="i_LastName" HorizontalAlignment="Left" Margin="374,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" TextChanged="i_LastName_TextChanged" Foreground="Lime"/>
+        <TextBox x:Name="i_Password" HorizontalAlignment="Left" Margin="374,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" TextChanged="i_Password_TextChanged" Foreground="Lime"/>
+        <TextBox x:Name="i_ConfirmPassword" HorizontalAlignment="Left" Margin="374,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" TextChanged="i_ConfirmPassword_TextChanged" Foreground="Lime"/>
         <!-- <PasswordBox x:Name="i_Password" HorizontalAlignment="Left" Margin="370,260,0,0" VerticalAlignment="Top" Width="200" Height="26"/>
         <PasswordBox x:Name="i_ConfirmPassword" HorizontalAlignment="Left" Margin="370,330,0,0" VerticalAlignment="Top" Width="200" Height="26"/>-->
-        
-        <Button x:Name="b_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="592,378,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_SignUp_Click"/>
+
+        <Button x:Name="b_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="433,345,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_SignUp_Click" FontFamily="Consolas"/>
 
     </Grid>
 </Page>

@@ -5,27 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCBuilderGUI"
         mc:Ignorable="d"
-        Title="MainMenu" Height="450" Width="800">
+        Title="Main Menu" Height="450" Width="800">
 
-    <Grid>
-        <Button x:Name="b_Processor" Content="Processor" HorizontalAlignment="Left" Margin="447,10,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_Processor_Click"/>
-        <Button x:Name="b_Motherboard" Content="Motherboard" HorizontalAlignment="Left" Margin="708,11,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_Motherboard_Click"/>
-        <Button x:Name="b_RAM" Content="RAM" HorizontalAlignment="Left" Margin="534,11,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_RAM_Click"/>
-        <Button x:Name="b_GraphicsCard" Content="Graphics Card" HorizontalAlignment="Left" Margin="621,11,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_GraphicsCard_Click"/>
-        <Button x:Name="b_Components" Content="Components" HorizontalAlignment="Left" Margin="97,11,0,0" VerticalAlignment="Top" Height="34" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_Components_Click"/>
-        <Button x:Name="b_User" Content="My Profile" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_MyProfile_Click"/>
+    <Grid Background="#FF0A0A0A">
+        <Button x:Name="b_Processor" Content="Processor" HorizontalAlignment="Left" Margin="433,10,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Processor_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_Motherboard" Content="Motherboard" HorizontalAlignment="Left" Margin="708,11,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Motherboard_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_RAM" Content="RAM" HorizontalAlignment="Left" Margin="520,11,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_RAM_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_GraphicsCard" Content="Graphics Card" HorizontalAlignment="Left" Margin="607,11,0,0" VerticalAlignment="Top" Height="35" Width="96" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_GraphicsCard_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_MyComputer" Content="My Computer" HorizontalAlignment="Left" Margin="126,12,0,0" VerticalAlignment="Top" Height="34" Width="90" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Components_Click" FontFamily="Consolas"/>
 
 
-        <ListView Margin="447,51,10,45">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button x:Name="b_Add" Content="Add" HorizontalAlignment="Left" Margin="488,394,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_Add_Click"/>
-        <Button x:Name="b_Update" Content="Update" HorizontalAlignment="Left" Margin="578,394,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_Update_Click"/>
-        <Button x:Name="b_Delete" Content="Delete" HorizontalAlignment="Left" Margin="667,394,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_Delete_Click"/>
+
+
+        <Button x:Name="b_Add" Content="Add" HorizontalAlignment="Left" Margin="447,297,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Add_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_Update" Content="Update" HorizontalAlignment="Left" Margin="566,297,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Update_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_Delete" Content="Delete" HorizontalAlignment="Left" Margin="694,297,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Delete_Click" FontFamily="Consolas"/>
+        <ListBox x:Name="lb_List" Margin="447,51,10,142" SelectionChanged="ListBoxComp_SelectionChanged" Background="#FF191919" FontFamily="Consolas" Foreground="Lime"/>
+
+        <Button x:Name="b_AddToPC" Content="Add to PC" HorizontalAlignment="Left" Margin="447,338,0,0" VerticalAlignment="Top" Height="36" Width="114" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_AddComputer_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_RemoveFromPC" Content="Remove from PC" HorizontalAlignment="Left" Margin="447,379,0,0" VerticalAlignment="Top" Height="36" Width="114" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_RemoveComputer_Click" FontFamily="Consolas"/>
+        <ListBox x:Name="lb_MyComputer" Margin="10,51,468,10" SelectionChanged="lb_MyComputer_SelectionChanged" Background="#FF191919" FontFamily="Consolas" Foreground="Lime"/>
 
     </Grid>
 </Window>

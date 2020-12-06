@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:PCBuilderGUI"
         mc:Ignorable="d"
         Title="Sign in" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="i_Login" HorizontalAlignment="Left" Margin="221,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged" Height="26" FontSize="20" FontFamily="Arial" BorderBrush="Black" Background="White" FontWeight="Normal"/>
-        <Button x:Name="b_SignIn" Content="Sign In" HorizontalAlignment="Left" Margin="321,279,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_SignIn_Click"/>
-        <Label x:Name="tv_Login" Content="Username" HorizontalAlignment="Left" Margin="221,108,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
-        <TextBox x:Name="i_Password" HorizontalAlignment="Left" Margin="221,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" BorderBrush="Black" FontSize="20" FontFamily="Arial" TextChanged="i_Password_TextChanged" />
-        <Label x:Name="tv_Password" Content="Password" HorizontalAlignment="Left" Margin="223,185,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Arial"/>
-        <Button x:Name="b_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="446,279,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="White" Click="b_SignUp_Click"/>
-       
+    <Grid Background="#FF0A0A0A">
+        <TextBox x:Name="i_Login" HorizontalAlignment="Left" Margin="308,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" Foreground="Lime"/>
+        <Button x:Name="b_SignIn" Content="Sign In" HorizontalAlignment="Left" Margin="275,279,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Foreground="Lime" Click="b_SignIn_Click" FontFamily="Consolas" Background="Black"/>
+        <Label x:Name="tv_Login" Content="Username" HorizontalAlignment="Left" Margin="308,118,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Consolas" Foreground="Lime"/>
+        <TextBox x:Name="i_Password" HorizontalAlignment="Left" Margin="308,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="26" BorderBrush="Black" FontSize="20" FontFamily="Consolas" TextChanged="i_Password_TextChanged" Background="#FF323232" Foreground="Lime" />
+        <Label x:Name="tv_Password" Content="Password" HorizontalAlignment="Left" Margin="310,195,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Consolas" Foreground="Lime"/>
+        <Button x:Name="b_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="450,279,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_SignUp_Click" FontFamily="Consolas"/>
+
     </Grid>
 </Window>

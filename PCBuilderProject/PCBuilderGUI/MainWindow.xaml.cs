@@ -29,8 +29,8 @@ namespace PCBuilderGUI
         {
             InitializeComponent();
         }
-        CreateBusinessLayer create = new CreateBusinessLayer();
-        ReadBusinessLayer read = new ReadBusinessLayer();
+        CRUDManager crud = new CRUDManager();
+        
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             userName = i_Login.Text;
@@ -55,10 +55,10 @@ namespace PCBuilderGUI
                 
                 if (userName != "" && passWord != "")
                 {
-                    bool access = read.ReadUsernameAndPassword(userName, passWord);
+                    bool access = crud.ReadUsernameAndPassword(userName, passWord);
                     if (access)
                     {
-                        MainMenu m = new MainMenu();
+                        MainMenu m = new MainMenu(userName);
                         m.Show();
                         this.Hide();
                     }

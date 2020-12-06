@@ -32,7 +32,7 @@ namespace PCBuilderGUI
         {
             InitializeComponent();
         }
-        CreateBusinessLayer create = new CreateBusinessLayer();
+        CRUDManager create = new CRUDManager();
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {

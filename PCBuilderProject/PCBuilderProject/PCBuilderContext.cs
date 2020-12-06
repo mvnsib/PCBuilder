@@ -17,6 +17,7 @@ namespace PCBuilderProject
         {
         }
 
+        public virtual DbSet<ComponentTable> ComponentTables { get; set; }
         public virtual DbSet<GraphicsCardTable> GraphicsCardTables { get; set; }
         public virtual DbSet<MotherboardTable> MotherboardTables { get; set; }
         public virtual DbSet<ProcessorTable> ProcessorTables { get; set; }
@@ -34,6 +35,75 @@ namespace PCBuilderProject
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ComponentTable>(entity =>
+            {
+                entity.HasKey(e => e.Compid)
+                    .HasName("PK__Componen__C0EBDBE6F59C3E61");
+
+                entity.ToTable("Component_Table");
+
+                entity.Property(e => e.Compid).HasColumnName("COMPID");
+
+                entity.Property(e => e.Cpuid).HasColumnName("CPUID");
+
+                entity.Property(e => e.Cpuname)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("CPUName");
+
+                entity.Property(e => e.Gpuid).HasColumnName("GPUID");
+
+                entity.Property(e => e.Gpuname)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("GPUName");
+
+                entity.Property(e => e.Mbid).HasColumnName("MBID");
+
+                entity.Property(e => e.Mbname)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("MBName");
+
+                entity.Property(e => e.Ramid).HasColumnName("RAMID");
+
+                entity.Property(e => e.Ramname)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("RAMName");
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.Cpu)
+                    .WithMany(p => p.ComponentTables)
+                    .HasForeignKey(d => d.Cpuid)
+                    .HasConstraintName("FK__Component__CPUID__49C3F6B7");
+
+                entity.HasOne(d => d.Gpu)
+                    .WithMany(p => p.ComponentTables)
+                    .HasForeignKey(d => d.Gpuid)
+                    .HasConstraintName("FK__Component__GPUID__4BAC3F29");
+
+                entity.HasOne(d => d.Mb)
+                    .WithMany(p => p.ComponentTables)
+                    .HasForeignKey(d => d.Mbid)
+                    .HasConstraintName("FK__Component___MBID__4AB81AF0");
+
+                entity.HasOne(d => d.Ram)
+                    .WithMany(p => p.ComponentTables)
+                    .HasForeignKey(d => d.Ramid)
+                    .HasConstraintName("FK__Component__RAMID__4CA06362");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.ComponentTables)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__Component__UserI__4D94879B");
+            });
+
             modelBuilder.Entity<GraphicsCardTable>(entity =>
             {
                 entity.HasKey(e => e.Gcid)
