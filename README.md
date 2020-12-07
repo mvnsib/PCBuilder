@@ -46,8 +46,8 @@ For my second sprint, my goal was to complete creating user and logging in, due 
 - [x] Complete User story 1.1.1
 - [ ] Complete User story 1.1.2
 - [ ] Complete User story 1.2
-- [ ] Push code to Git
-- [x] Complete the wireframe for User story 0.3
+- [x] Push code to Git
+
 
 **Sprint Review**
 
