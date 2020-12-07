@@ -126,8 +126,23 @@ I began this sprint by trying add a singular component (Processor) into the Comp
 
 I got tracked away by this bug on my code, everytime the user clicks on Add or Update after the 2nd try it breaks my build. I've been trying to fix this issue throughout most of the day.
 
-## Sprint 6: 6/12/2020
+### Sprint 6: 6/12/2020
 
 **Sprint Overview**
 
-On my last sprint I want to focus on making my joint table viewable in the list box, adding a colour theme to my GUI, fix the bug I faced in my previous Sprint and 
+On my last sprint I want to focus on making my joint table viewable in the list box, adding a colour theme to my GUI, fix the bug I faced in my previous Sprint and I might add the total cost as a feature, depending on how much time I've got left.
+
+**Sprint Goals**
+- [x] Complete User Story 3
+- [x] Complete User Story 4
+- [x] Update README.md
+- [x] Push Code to GitHub
+
+**Sprint Review**
+
+I began this sprint by fixing my bug from Sprint 5, I solved this issue by instanciating my object inside the if statements which opens up the new window. I then made sure that my joint table is viewable in the main menu by making the joint statement. This took me a total of 2 sprints as it was one of my longest methods in my CRUD. Unfortunately I couldn't get my total Price working, since my price value is nullable and after changing it to NOT NULL it wouldn't let me re-Scaffold my database, so I stopped further investigating this bug and left it.
+
+**Sprint Retrospective**
+
+Throughout this whole project I learned to keep your priorities as straight as possible and make sure to complete the most important tasks and to keep moving forward rather than refining and perfecting every feature. This project has opened my eyes how to utilize agile to practice.
+
