@@ -6,6 +6,8 @@
 The main goal of this project is to familiarise software development using SCRUM, and at the same time to deliver  a three-tier system.
 The application should meet all the acceptance criteria listed in the project backlog and make sure the basic CRUD functionalities for both Users and Component work properly.
 
+### KanBan Board
+![Sprint 0](https://i.gyazo.com/cf17fd8a3aaeb9331c189919786b2ae1.png)
 
 ## Sprint Breakdowns
 
