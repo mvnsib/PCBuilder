@@ -68,7 +68,6 @@ In this sprint, I mainly focused on finishing the few Goals that was left from S
 
 - [x] Update README.md (Sprint 2)
 - [x] Complete User story 1.1.2
-- [x] Complete User story 1.1.3
 - [ ] Complete User story 1.2
 - [x] Start User story 4: design a basic layout of the GUI
 - [x] Push code to Git
