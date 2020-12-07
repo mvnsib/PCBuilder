@@ -105,3 +105,29 @@ I began my sprint by finishing the CRUD methods and instead of using 4 different
 **Sprint Retrospective**
 
 Throughout the day it was a short sprint as we started a bit later than usual, since we had to discuss about our presentation and we had our Friday stand-up, and on top of it we finished an hour earlier for the quiz, so that gave us a total of 4 hours to work for our Sprint and unfortunately I wasn't able to get a lot done, so I worked for a couple more hours to get most of the things done besides the testing for my CRUD methods and connecting the CRUD with the frontend.
+
+### Sprint 5: 5/12/2020
+
+**Sprint Overview**
+
+For my fifth Sprint I wanted to focus on joining my 4 tables into 1 which will output all the added core component to a PC. I plan on making all the components added together and make them viewable.
+
+**Sprint Goals**
+- [ ] Complete User Story 3
+- [x] Complete User Story 3.1
+- [x] Complete README.md
+- [x] Push Code to GitHub
+
+**Sprint Review**
+
+I began this sprint by trying add a singular component (Processor) into the Components Table, instead of trying to add all of them. I needed to get one table to join instead of 4. I managed to add the Processor table to the Components Table, and copied and pasted and adapted it to the corresponding table. I also tried to refine the windows that use the CRUD function and unfortunately stumbled on a bug which breaks the code everytime the user creates an instance of that window.
+
+**Sprint Retrospective**
+
+I got tracked away by this bug on my code, everytime the user clicks on Add or Update after the 2nd try it breaks my build. I've been trying to fix this issue throughout most of the day.
+
+## Sprint 6: 6/12/2020
+
+**Sprint Overview**
+
+On my last sprint I want to focus on making my joint table viewable in the list box, adding a colour theme to my GUI, fix the bug I faced in my previous Sprint and 
