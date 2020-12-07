@@ -13,6 +13,7 @@ The application should meet all the acceptance criteria listed in the project ba
 
 ### Sprint 1: 1/12/2020
 
+![Sprint 1](https://i.gyazo.com/2333228e70538ef22fcac5cd47ab686a.png)
 
 **Sprint Overview**
 
@@ -36,6 +37,8 @@ I began creating the application by using the database-first approach and set up
 I have underestimated with the workload that I gave to myself and didn't manage my time too well, and eventually I worked over-time to complete my Sprint. To improve for Sprint 2 I need to be able to manage my time better by coming up with a plan that balances with how much I work and make sure I take regular small breaks to prevent procrastination from working too much/ being stuck at a problem for too long.
 
 ### Sprint 2: 2/12/2020
+
+![Sprint 2](https://i.gyazo.com/62453b0398f508081038f5129bf9e75e.png)
 
 **Sprint Overview**
 
@@ -63,6 +66,8 @@ Just as Sprint 1, I have underestimated my program, and eventually I was stuck a
 
 ### Sprint 3: 3/12/2020
 
+![Sprint 3](https://i.gyazo.com/2bd6ad18b50b0cd26da72c7cfa9fad4c.png)
+
 **Sprint Overview**
 In this sprint, I mainly focused on finishing the few Goals that was left from Sprint 2, and managed to get ahead. I managed to complete my first epics which is allowing the user to sign up and sign in to their account and being redirected to the main menu. Eventually I had a few Errors with my code and invested too much time on errors that doesn't have a huge impact on the program. I should be focusing on getting the user stories done than perfecting each user story. 
 
@@ -84,6 +89,8 @@ I began my sprint by updating my README.md, after spending some time on that I f
 In order to do better and get this project done, I need to focus less on perfecting the simple things like the GUI and not overcomplicate the validation. I shouldn't have spent 2 days on the login menu and focus on testing towards the end. For tomorrow and saturday I should 100% focus on the main component classes.
 
 ### Sprint 4: 4/12/2020
+
+![Sprint 4](https://i.gyazo.com/0403a4e3e8d8d9faaeb27fcd4dd21a26.png)
 
 **Sprint Overview**
 
@@ -110,6 +117,8 @@ Throughout the day it was a short sprint as we started a bit later than usual, s
 
 ### Sprint 5: 5/12/2020
 
+![Sprint 5](https://i.gyazo.com/3ea6cca37ed209655ff9153d81cbe8a7.png)
+
 **Sprint Overview**
 
 For my fifth Sprint I wanted to focus on joining my 4 tables into 1 which will output all the added core component to a PC. I plan on making all the components added together and make them viewable.
@@ -129,6 +138,8 @@ I began this sprint by trying add a singular component (Processor) into the Comp
 I got tracked away by this bug on my code, everytime the user clicks on Add or Update after the 2nd try it breaks my build. I've been trying to fix this issue throughout most of the day.
 
 ### Sprint 6: 6/12/2020
+
+![Sprint 6](https://i.gyazo.com/d40b9826307db1bb3d1bc54ee1212e03.png)
 
 **Sprint Overview**
 
