@@ -9,6 +9,27 @@ The application should meet all the acceptance criteria listed in the project ba
 ### KanBan Board
 ![Sprint 0](https://i.gyazo.com/cf17fd8a3aaeb9331c189919786b2ae1.png)
 
+### GUI
+
+#### Sign up
+![img](https://i.gyazo.com/722f657d188cf2be29b2822864af1e46.png)
+
+#### Sign in
+![img](https://i.gyazo.com/efaf6875e99ca98a2c68cb0d43752f49.png)
+
+#### Main Menu
+![img](https://i.gyazo.com/39f1346046e2234aae3dd2d674297d20.png)
+
+#### Add PC
+![img](https://i.gyazo.com/39f1346046e2234aae3dd2d674297d20.png)
+
+#### Update Processor
+![img](https://i.gyazo.com/40abba2a6dd4f048715b2beb9e4638f5.png)
+
+#### Add Mother board
+![img](https://i.gyazo.com/ff9a11148a3f1eae94b600f6c0063d9e.png)
+
+
 ## Sprint Breakdowns
 
 ### Sprint 1: 1/12/2020
