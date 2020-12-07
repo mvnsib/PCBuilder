@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCBuilderGUI"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Background="#FF494949"
         Title="Add Processor" Height="500" Width="400">
     <Grid Background="#FF0A0A0A">

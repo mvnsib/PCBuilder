@@ -58,6 +58,7 @@ namespace PCBuilderGUI
                     bool access = crud.ReadUsernameAndPassword(userName, passWord);
                     if (access)
                     {
+                        crud.SetSelectedUser("mvnsib");
                         MainMenu m = new MainMenu(userName);
                         m.Show();
                         this.Hide();

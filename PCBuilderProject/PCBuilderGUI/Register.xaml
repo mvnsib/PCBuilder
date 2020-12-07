@@ -25,7 +25,8 @@
         <!-- <PasswordBox x:Name="i_Password" HorizontalAlignment="Left" Margin="370,260,0,0" VerticalAlignment="Top" Width="200" Height="26"/>
         <PasswordBox x:Name="i_ConfirmPassword" HorizontalAlignment="Left" Margin="370,330,0,0" VerticalAlignment="Top" Width="200" Height="26"/>-->
 
-        <Button x:Name="b_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="433,345,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_SignUp_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="536,345,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_SignUp_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_Back" Content="Go Back" HorizontalAlignment="Left" Margin="433,345,0,0" VerticalAlignment="Top" Height="35" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Back_Click" FontFamily="Consolas"/>
 
     </Grid>
 </Page>

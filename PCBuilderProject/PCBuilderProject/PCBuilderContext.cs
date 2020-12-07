@@ -123,7 +123,14 @@ namespace PCBuilderProject
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
                 entity.Property(e => e.Vram).HasColumnName("VRAM");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.GraphicsCardTables)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__GraphicsC__UserI__5DCAEF64");
             });
 
             modelBuilder.Entity<MotherboardTable>(entity =>
@@ -145,6 +152,13 @@ namespace PCBuilderProject
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("MBName");
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.MotherboardTables)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__Motherboa__UserI__5BE2A6F2");
             });
 
             modelBuilder.Entity<ProcessorTable>(entity =>
@@ -166,6 +180,13 @@ namespace PCBuilderProject
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.ProcessorTables)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__Processor__UserI__5AEE82B9");
             });
 
             modelBuilder.Entity<RamTable>(entity =>
@@ -186,6 +207,13 @@ namespace PCBuilderProject
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.RamTables)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__RAM_Table__UserI__5CD6CB2B");
             });
 
             modelBuilder.Entity<UserTable>(entity =>

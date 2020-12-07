@@ -18,7 +18,9 @@ namespace PCBuilderProject
         public string Model { get; set; }
         public int Speed { get; set; }
         public int Price { get; set; }
+        public int? UserId { get; set; }
 
+        public virtual UserTable User { get; set; }
         public virtual ICollection<ComponentTable> ComponentTables { get; set; }
     }
 }

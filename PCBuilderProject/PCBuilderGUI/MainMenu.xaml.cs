@@ -32,11 +32,16 @@ namespace PCBuilderGUI
         {
             InitializeComponent();
             PopulateListBox();
-            
+            //PopulatePCListBox();
         }
         public MainMenu(string userLogin) : this()
         {
             userName = userLogin;
+            crud.SetSelectedUser(userName);
+        }
+        private void PopulatePCListBox()
+        {
+            lb_MyComputer.ItemsSource = crud.RetrieveAddedCPUComponents();
         }
         private void PopulateListBox()
         {
@@ -122,7 +127,7 @@ namespace PCBuilderGUI
         {
             if (CPUList)
             {
-                ComponentWindow addCPU = new ComponentWindow();
+                ComponentWindow addCPU = new ComponentWindow(userName);
                 addCPU.Show();
             }
             if (RAMList)
@@ -211,7 +216,10 @@ namespace PCBuilderGUI
 
         private void b_Components_Click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show($"Logged in as: {userName} ");
+            AddComputer addPC = new AddComputer(userName);
+            addPC.Show();
+
+            PopulatePCListBox();
         }
         public void PopulateFields (UpdateCPU updateCPU)
         {
@@ -301,17 +309,9 @@ namespace PCBuilderGUI
 
         }
 
-        private void b_AddComputer_Click(object sender, RoutedEventArgs e)
+        private void b_Refresh_Click(object sender, RoutedEventArgs e)
         {
-            if (CPUList)
-            {
-                //crud.RetrieveAllPCComponents("mvnsib").Add;
-            }
-        }
-
-        private void b_RemoveComputer_Click(object sender, RoutedEventArgs e)
-        {
-
+            PopulatePCListBox();
         }
     }
 }

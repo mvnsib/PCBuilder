@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCBuilderGUI"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Main Menu" Height="450" Width="800">
 
     <Grid Background="#FF0A0A0A">
@@ -22,8 +23,7 @@
         <Button x:Name="b_Delete" Content="Delete" HorizontalAlignment="Left" Margin="694,297,0,0" VerticalAlignment="Top" Height="36" Width="82" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Delete_Click" FontFamily="Consolas"/>
         <ListBox x:Name="lb_List" Margin="447,51,10,142" SelectionChanged="ListBoxComp_SelectionChanged" Background="#FF191919" FontFamily="Consolas" Foreground="Lime"/>
 
-        <Button x:Name="b_AddToPC" Content="Add to PC" HorizontalAlignment="Left" Margin="447,338,0,0" VerticalAlignment="Top" Height="36" Width="114" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_AddComputer_Click" FontFamily="Consolas"/>
-        <Button x:Name="b_RemoveFromPC" Content="Remove from PC" HorizontalAlignment="Left" Margin="447,379,0,0" VerticalAlignment="Top" Height="36" Width="114" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_RemoveComputer_Click" FontFamily="Consolas"/>
+        <Button x:Name="b_AddToPC" Content="Refresh" HorizontalAlignment="Left" Margin="277,11,0,0" VerticalAlignment="Top" Height="36" Width="55" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_Refresh_Click" FontFamily="Consolas"/>
         <ListBox x:Name="lb_MyComputer" Margin="10,51,468,10" SelectionChanged="lb_MyComputer_SelectionChanged" Background="#FF191919" FontFamily="Consolas" Foreground="Lime"/>
 
     </Grid>

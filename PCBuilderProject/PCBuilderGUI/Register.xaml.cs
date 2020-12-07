@@ -106,6 +106,14 @@ namespace PCBuilderGUI
                 MessageBox.Show(ex.Message);
             }
         }
-      
+
+        private void b_Back_Click(object sender, RoutedEventArgs e)
+        {
+            var log = new Login();
+
+            var window = (Login)Application.Current.MainWindow;
+            log.Show();
+            window.Hide();
+        }
     }
 }

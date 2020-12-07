@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCBuilderGUI"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Update RAM" Height="500" Width="400">
     <Grid Background="#FF0A0A0A">
         <TextBox x:Name="i_Capacity" HorizontalAlignment="Left" Margin="170,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" TextChanged="Capacity_TextChanged" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" Foreground="Lime"/>

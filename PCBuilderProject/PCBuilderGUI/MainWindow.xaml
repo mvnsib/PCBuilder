@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCBuilderGUI"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Sign in" Height="450" Width="800">
     <Grid Background="#FF0A0A0A">
         <TextBox x:Name="i_Login" HorizontalAlignment="Left" Margin="308,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" Foreground="Lime"/>

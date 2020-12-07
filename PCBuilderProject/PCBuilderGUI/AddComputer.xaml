@@ -1,0 +1,25 @@
+﻿<Window x:Class="PCBuilderGUI.AddComputer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCBuilderGUI"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Add Computer" Height="450" Width="600">
+    <Grid Background="#FF0A0A0A">
+
+        <Label Content="Processor" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.543,0.644" FontFamily="Consolas" Foreground="Lime"/>
+        <Label Content="RAM" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" FontFamily="Consolas" Foreground="Lime"/>
+        <Label Content="Mother Board" HorizontalAlignment="Left" Margin="250,25,0,0" VerticalAlignment="Top" FontFamily="Consolas" Foreground="Lime"/>
+        <Label Content="Graphics Card" HorizontalAlignment="Left" Margin="260,214,0,0" VerticalAlignment="Top" FontFamily="Consolas" Foreground="Lime"/>
+
+        <ListBox x:Name="lb_CPU" Margin="10,56,379,235" Background="#FF191919" SelectionChanged="lb_CPU_SelectionChanged" Foreground="Lime" FontFamily="Consolas"/>
+        <ListBox x:Name="lb_MB" Margin="250,56,139,235" Background="#FF191919" SelectionChanged="lb_MB_SelectionChanged" Foreground="Lime" FontFamily="Consolas"/>
+        <ListBox x:Name="lb_RAM" Margin="10,245,379,46" Background="#FF191919" SelectionChanged="lb_RAM_SelectionChanged" Foreground="Lime" FontFamily="Consolas"/>
+        <ListBox x:Name="lb_GPU" Margin="250,245,139,46" Background="#FF191919" SelectionChanged="lb_GPU_SelectionChanged" Foreground="Lime" FontFamily="Consolas"/>
+
+        <Button x:Name="b_CreatePC" Content="Create PC" HorizontalAlignment="Left" Margin="482,352,0,0" VerticalAlignment="Top" Height="36" Width="97" FontWeight="Bold" Background="Black" Foreground="Lime" Click="b_CreatePC_Click" FontFamily="Consolas"/>
+
+    </Grid>
+</Window>

@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCBuilderGUI"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Update Processor" Height="500" Width="400">
     <Grid Background="#FF0A0A0A">
-        <RadioButton x:Name="Manufacturer_AMD" Content="AMD" HorizontalAlignment="Left" Margin="88,76,0,0" FontSize="20" VerticalAlignment="Top" Checked="Manufacturer_AMD_Checked" Foreground="Lime" FontFamily="Consolas"/>
-        <RadioButton x:Name="Manufacturer_Intel" Content="Intel" HorizontalAlignment="Left" Margin="200,76,0,0" FontSize="20" VerticalAlignment="Top" Checked="Manufacturer_Intel_Checked" FontFamily="Consolas" Foreground="Lime"/>
+        <RadioButton IsEnabled="False" x:Name="Manufacturer_AMD" Content="AMD" HorizontalAlignment="Left" Margin="88,76,0,0" FontSize="20" VerticalAlignment="Top" Checked="Manufacturer_AMD_Checked" Foreground="Lime" FontFamily="Consolas"/>
+        <RadioButton IsEnabled="False" x:Name="Manufacturer_Intel" Content="Intel" HorizontalAlignment="Left" Margin="200,76,0,0" FontSize="20" VerticalAlignment="Top" Checked="Manufacturer_Intel_Checked" FontFamily="Consolas" Foreground="Lime"/>
 
         <TextBox IsEnabled="False" x:Name="i_CPUFamily" HorizontalAlignment="Left" Margin="161,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged" Height="26" FontSize="20" FontFamily="Consolas" BorderBrush="Black" Background="#FF323232" FontWeight="Normal" Foreground="Lime"/>
         <Label x:Name="tv_CPUFamily" Content="CPU Family" HorizontalAlignment="Left" Margin="26,140,0,0" VerticalAlignment="Top" FontSize="19" FontFamily="Consolas" Foreground="Lime"/>

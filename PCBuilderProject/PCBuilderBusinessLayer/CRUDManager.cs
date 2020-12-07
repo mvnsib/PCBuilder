@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using PCBuilderProject;
+using System.Collections;
 
 namespace PCBuilderBusinessLayer
 {
     public class CRUDManager
     {
         public UserTable SelectedUser { get; set; }
+        
         public ProcessorTable SelectProcessor { get; set; }
         public RamTable SelectRAM { get; set; }
         public MotherboardTable SelectMotherboard { get; set; }
@@ -28,6 +30,14 @@ namespace PCBuilderBusinessLayer
                 return db.GraphicsCardTables.ToList();
             }
         }
+        public void SetSelectedUser(string userName)
+        {
+            using (var db = new PCBuilderContext())
+            {
+                SelectedUser = db.UserTables.Where(u => u.UserName == userName).First();
+
+            }
+        }
         public List<RamTable> RetrieveAllRAM()
         {
             using (var db = new PCBuilderContext())
@@ -35,6 +45,8 @@ namespace PCBuilderBusinessLayer
                 return db.RamTables.ToList();
             }
         }
+
+
         public List<MotherboardTable> RetrieveAllMB()
         {
             using (var db = new PCBuilderContext())
@@ -43,7 +55,7 @@ namespace PCBuilderBusinessLayer
             }
         }
 
-        public List<string> RetrieveAllPCComponents(string currentUser)
+        public List<string> RetrieveAddedCPUComponents()
         {
             using (var db = new PCBuilderContext())
             {
@@ -52,7 +64,7 @@ namespace PCBuilderBusinessLayer
                             join g in db.GraphicsCardTables on p.Gpuid equals g.Gcid
                             join r in db.RamTables on p.Ramid equals r.Ramid
                             join m in db.MotherboardTables on p.Mbid equals m.Mbid
-                            where p.UserName == currentUser
+                            where p.UserName == SelectedUser.UserName
                             select new { p, c, g, r, m }
                             );
                 List<string> pcList = new List<string>();
@@ -67,18 +79,63 @@ namespace PCBuilderBusinessLayer
                 return pcList;
             }
         }
-
-        public void AddComponent(string componentName,string componentType)
+        public void AddPC(string cpuFamily, string ramModel, int ramSpeed, string gpuModel, string MbName)
         {
-            string type;
-            using (var db = new PCBuilderContext()) {
-                if (componentType == "GPU")
-                {
+            //CPU Variables
+            int cpuID;
+            string cpuManufacturer;
 
-                } 
+            //RAM Variables
+            int RAMID;
+            string RAMModel;
+            string RAMManufacturer;
+            int RAMCapacity;
+
+            //GPU Variables
+            int GPUID;
+            string GPUManufacturer;
+            int GPUVram;
+
+            //MOBO Variables
+            int MBID;
+            string MBManufacturer;
+
+            using (var db = new PCBuilderContext())
+            {
+                cpuID = db.ProcessorTables.Where(c => c.Cpufamily == cpuFamily).FirstOrDefault().Cpuid;
+                cpuManufacturer = db.ProcessorTables.Where(c => c.Cpufamily == cpuFamily).FirstOrDefault().Manufacturer;
+
+                RAMID = db.RamTables.Where(r => r.Model == ramModel && r.Speed == ramSpeed).FirstOrDefault().Ramid;
+                RAMModel = db.RamTables.Where(r => r.Model == ramModel && r.Speed == ramSpeed).FirstOrDefault().Model;
+                RAMManufacturer = db.RamTables.Where(r => r.Model == ramModel && r.Speed == ramSpeed).FirstOrDefault().Manufacturer;
+                RAMCapacity = db.RamTables.Where(r => r.Model == ramModel && r.Speed == ramSpeed).FirstOrDefault().Capacity;
+
+
+                GPUID = db.GraphicsCardTables.Where(g => g.Model == gpuModel).FirstOrDefault().Gcid;
+                GPUManufacturer = db.GraphicsCardTables.Where(g => g.Model == gpuModel).FirstOrDefault().Manufacturer;
+                GPUVram = db.GraphicsCardTables.Where(g => g.Model == gpuModel).FirstOrDefault().Vram;
+
+                MBID = db.MotherboardTables.Where(m => m.Mbname == MbName).FirstOrDefault().Mbid;
+                MBManufacturer = db.MotherboardTables.Where(m => m.Mbname == MbName).FirstOrDefault().Manufacturer;
+
+                var newPC = new ComponentTable()
+                {
+                    Cpuid = cpuID,
+                    Mbid = MBID,
+                    Gpuid = GPUID,
+                    Ramid = RAMID,
+                    UserId = SelectedUser.UserId,
+                    Cpuname = $"{cpuManufacturer} {cpuFamily}",
+                    Mbname = $"{MBManufacturer} {MbName}",
+                    Gpuname = $"{GPUManufacturer} {gpuModel} {GPUVram}GB",
+                    Ramname = $"{RAMCapacity}GB {RAMManufacturer} {RAMModel} {ramSpeed}MHz",
+                    UserName = SelectedUser.UserName
+                };
+                db.ComponentTables.Add(newPC);
+                db.SaveChanges();
             }
         }
-
+        
         public void SetSelectedProcessor(object selectCPU)
         {
             SelectProcessor = (ProcessorTable)selectCPU;
@@ -124,7 +181,7 @@ namespace PCBuilderBusinessLayer
             }
         }
 
-        public void CreateProcessor(string manufacturers, string cpuFamily, int core, int price)
+        public void CreateProcessor(string manufacturers, string cpuFamily, int core, int price, int userId)
         {
             using (var db = new PCBuilderContext())
             {
@@ -134,7 +191,8 @@ namespace PCBuilderBusinessLayer
                         Manufacturer = manufacturers,
                         Cpufamily = cpuFamily,
                         Core = core,
-                        Price = price
+                        Price = price,
+                        UserId = userId
                     };
                     db.ProcessorTables.Add(newProcessor);
 
@@ -423,5 +481,28 @@ namespace PCBuilderBusinessLayer
                 db.SaveChanges();
             }
         }
+
+        public int findUserID(string userName)
+        {
+            int userID;
+            using (var db = new PCBuilderContext())
+            {
+                userID = db.UserTables.Where(u => u.UserName == userName).FirstOrDefault().UserId;
+
+                return userID;
+            }
+            
+        }
+
+        public int getCPUPrice(int cpuID)
+        {
+            int cpuCost;
+            using (var db = new PCBuilderContext())
+            {
+                cpuCost = (int) db.ProcessorTables.Where(c => c.Cpuid == cpuID).FirstOrDefault().Price;
+            }
+            return cpuCost;
+        }
+
     }
 }
