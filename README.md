@@ -162,7 +162,7 @@ I got tracked away by this bug on my code, everytime the user clicks on Add or U
 
 ![Sprint 6](https://i.gyazo.com/d40b9826307db1bb3d1bc54ee1212e03.png)
 
-**Sprint Overview **
+**Sprint Overview**
 
 On my last sprint I want to focus on making my joint table viewable in the list box, adding a colour theme to my GUI, fix the bug I faced in my previous Sprint and I might add the total cost as a feature, depending on how much time I've got left.
 
